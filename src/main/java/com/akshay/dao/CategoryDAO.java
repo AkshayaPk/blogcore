@@ -49,12 +49,15 @@ public class CategoryDAO {
 	}
 
 	public List<Category> listByUserId(int userId) {
-		final String sql = "select id,name from category where user_id=?";
+		final String sql = "select id,name,user_id from category where user_id=?";
 		Object[] params = { userId };
 		return jdbcTemplate.query(sql, params, (rs, rowNum) -> {
 			final Category category = new Category();
+			final User user=new User();
+			user.setId(rs.getInt("user_id"));
 			category.setId(rs.getInt("id"));
 			category.setName(rs.getString("name"));
+			category.setUserId(user);
 			return category;
 		});
 	}
