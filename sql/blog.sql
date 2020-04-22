@@ -1,4 +1,3 @@
-/* create databasee */
 CREATE DATABASE `blog`
 
 USE `blog`;
