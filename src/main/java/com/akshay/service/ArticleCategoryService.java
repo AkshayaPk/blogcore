@@ -8,6 +8,7 @@ import com.akshay.exception.ValidationException;
 import com.akshay.model.ArticleCategory;
 import com.akshay.validator.ArticleCategoryValidator;
 
+//Comments
 public class ArticleCategoryService {
 	ArticleCategoryDAO dao = new ArticleCategoryDAO();
 	ArticleCategoryValidator articleCategoryValidator = new ArticleCategoryValidator();
